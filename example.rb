@@ -1,4 +1,3 @@
-require 'appium_lib'
 require 'wrappium'
 
 APP_PATH = '../build/Release-iphonesimulator/SayHello.app'
