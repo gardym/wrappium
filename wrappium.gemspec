@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.name          = "wrappium"
   spec.version       = Wrappium::VERSION
   spec.authors       = ["Mike Gardiner"]
-  spec.email         = ["conversationing@gmail.com"]
+  spec.email         = ["mike@gardym.io"]
   spec.summary       = %q{Wrap Appium to provide an easy to manage client/server for test harnesses}
   spec.description   = %q{}
   spec.homepage      = ""
