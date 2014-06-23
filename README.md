@@ -1,8 +1,10 @@
 # Wrappium
 
-TODO: Write a gem description
-
 ## Installation
+
+Get Appium
+
+    npm install -g appium
 
 Add this line to your application's Gemfile:
 
@@ -12,13 +14,16 @@ And then execute:
 
     $ bundle
 
-Or install it yourself as:
-
-    $ gem install wrappium
-
 ## Usage
 
-TODO: Write usage instructions here
+See [example.rb](example.rb) for details, or just try:
+
+    require 'wrappium'
+    
+    run_appium_ios(APP_PATH) do |driver|
+      input = driver.find_element(:name, 'name')
+      # etc...
+    end
 
 ## Contributing
 
