@@ -20,7 +20,8 @@ See [example.rb](example.rb) for details, or just try:
 
     require 'wrappium'
     
-    run_appium_ios(APP_PATH) do |driver|
+    settings = { platformName: 'iOS', versionNumber: '7.1', app:  './build/Release-iphonesimulator/HelloWorld.app' }
+    run_appium_ios(settings) do |driver|
       input = driver.find_element(:name, 'name')
       # etc...
     end

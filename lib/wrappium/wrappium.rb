@@ -33,9 +33,9 @@ module Wrappium
 
 end
 
-def run_appium_ios(app_path)
+def run_appium_ios(simulator_settings)
   driver_settings = {
-    caps: { platformName: 'iOS', versionNumber: '7.1', app: app_path, },
+    caps: simulator_settings,
     appium_lib: { sauce_username: nil, sauce_access_key: nil } # don't run on Sauce
   }
 

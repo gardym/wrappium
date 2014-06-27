@@ -1,8 +1,8 @@
 require 'wrappium'
 
-APP_PATH = '../build/Release-iphonesimulator/SayHello.app'
+settings = { platformName: 'iOS', versionNumber: '7.1', app:  '../build/Release-iphonesimulator/SayHello.app' }
 
-run_appium_ios(APP_PATH) do |driver|
+run_appium_ios(settings) do |driver|
   input = driver.find_element(:name, 'sayName')
   input.send_keys('World')
 
