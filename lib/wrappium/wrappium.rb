@@ -39,7 +39,10 @@ def run_appium_ios(simulator_settings)
     appium_lib: { sauce_username: nil, sauce_access_key: nil } # don't run on Sauce
   }
 
-  Wrappium::run_in_parallel('appium', '--log-no-colors') do
+  server_args = ['appium', '--log-no-colors']
+  server_args += ['-U', simulator_settings[:device]] if simulator_settings[:device]
+
+  Wrappium::run_in_parallel(*server_args) do
     driver = Appium::Driver.new(driver_settings)
     driver.wait_for_connection
 
